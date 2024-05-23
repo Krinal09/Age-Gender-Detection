@@ -22,7 +22,7 @@ age_classes_reversed = list(reversed(age_classes))
 def main():
     st.set_page_config(
         page_title="AGE-GENDER DETECTOR",
-        page_icon="chart_with_upwards_trend",
+        page_icon="calendar",
         layout="wide",
     )
 
@@ -82,7 +82,7 @@ def main():
         gender_model = load_model('Gender_Detection.h5')
         age_model = load_model('Age_Detection.h5')
         st.title(':blue[REAL TIME AGE AND GENDER DETECTION] :camera:')
-        st.subheader("Click on Start to use webcam and detect your age and gender real time :person_picture:")
+        st.subheader("Click on Start to use webcam and detect your age and gender real time:")
         Camera_button = st.button("Start Camera")
         if Camera_button :
             
