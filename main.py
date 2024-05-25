@@ -15,7 +15,7 @@ import numpy as np
 from numpy import asarray,save
 import time
 
-classes = ['man','woman']
+classes = ['male','female']
 age_classes = ['0-10','11-20','21-30','31-40','41-50','51-60','61-70','71-80','81-90','91-120']
 age_classes_reversed = list(reversed(age_classes))
 
@@ -47,8 +47,8 @@ def main():
 
     if selected == 'Upload Image' :
         # load model
-        gender_model = load_model('Gender_Detection.h5')
-        age_model = load_model('Age_Detection.h5')
+        gender_model = load_model('models\Gender_Detection.h5')
+        age_model = load_model('models\Age_Detection.h5')
 
         st.title(':blue[UPLOAD YOUR PICTURE TO PREDICT] :frame_with_picture:')
         upload_file = st.file_uploader("Choose an image to predict", type=["jpg","jpeg","png"], label_visibility="collapsed")
@@ -80,8 +80,8 @@ def main():
 
     if selected == "Camera Detection" :
         # load model
-        gender_model = load_model('Gender_Detection.h5')
-        age_model = load_model('Age_Detection.h5')
+        gender_model = load_model('models\Gender_Detection.h5')
+        age_model = load_model('models\Age_Detection.h5')
         st.title(':green[REAL TIME AGE AND GENDER DETECTION] :')
         st.subheader("Click on Start to use webcam and detect your age and gender real time :heart_decoration:")
         Camera_button = st.button("Start Camera")
@@ -151,3 +151,4 @@ def main():
                 
 if __name__ == "__main__":
     main()
+    
