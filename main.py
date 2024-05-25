@@ -1,3 +1,6 @@
+import os
+os.environ['OPENCV_VIDEOIO_PRIORITY_MSMF'] = '0'
+
 from email.mime import image
 import tensorflow as tf
 from tensorflow import keras
