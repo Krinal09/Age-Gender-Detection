@@ -16,7 +16,7 @@ age_model = load_model('Age_Detection.h5')
 
 webcam = cv2.VideoCapture(0)
     
-classes = ['man','woman']
+classes = ['male','female']
 age_classes = ['0-10','11-20','21-30','31-40','41-50','51-60','61-70','71-80','81-90','91-120']
 
 while webcam.isOpened():
